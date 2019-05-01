@@ -31,7 +31,7 @@
 #
 class openvpn::service {
   if $::openvpn::manage_service and !$::openvpn::params::namespecific_rclink {
-    service { 'openvpn':
+    service { 'openvpn*':
       ensure     => running,
       enable     => true,
       hasrestart => true,
